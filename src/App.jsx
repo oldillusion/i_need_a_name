@@ -1,10 +1,12 @@
-// import React from 'react';
+import React from "react";
+import NameGenerator from "./NameGenerator";
 
-export const App = () => {
-    return <>
-        <p>We really like a React test too.</p>
-        <p>I also like turtles.</p>
-    </>;
-}
+const App = () => {
+    return (
+        <div>
+            <NameGenerator />
+        </div>
+    );
+};
 
 export default App;
