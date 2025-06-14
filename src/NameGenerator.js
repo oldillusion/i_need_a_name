@@ -5,7 +5,6 @@ import "./styles.css";
 const NameGenerator = () => {
     const [randomName, setRandomName] = useState("");
 
-    // Function to fetch a new name
     const fetchName = async () => {
         try {
             const response = await axios.get("/api/name");
@@ -15,16 +14,15 @@ const NameGenerator = () => {
         }
     };
 
-    // Fetch a name on initial load
     useEffect(() => {
         fetchName();
     }, []);
 
     return (
         <div className="container">
-            <h1>Name That Thing</h1>
+            <div className="heading">Name that Thing</div>
             <div className="name-display">{randomName}</div>
-            <button onClick={fetchName}>Generate New Name</button>
+            <button onClick={fetchName}>And another one...</button>
         </div>
     );
 };

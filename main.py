@@ -6,10 +6,12 @@ app = Flask(__name__, static_folder='public')
 # Load JSON data using NameData class
 name_data = NameData('resources/nouns.json', 'resources/adjectives.json')
 
+# API routes
 @app.route('/api/name', methods=['GET'])
 def api():
     return jsonify({"name": name_data.generate_random_name()})
 
+# Attempt to serve any remaining routes as static files
 @app.route('/', defaults={'u_path': ''})
 @app.route('/<path:u_path>')
 def serve_static(u_path):

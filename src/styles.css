@@ -10,16 +10,25 @@ body {
 }
 
 .container {
+    width: 450px;
     text-align: center;
     background-color: #3e6e3e; /* Slightly darker green */
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.heading {
+    background-color: #d0f0bf;
+    color: #2f4f2f;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
 .name-display {
     font-size: 2rem;
-    margin: 10px 0;
+    margin: 10px;
     font-weight: bold;
 }
 
@@ -28,6 +37,7 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
+    margin: 10px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
